@@ -18,6 +18,12 @@
     <!-- Compile the java code in ${src.dir} into ${build.dir} -->
     <target name="compile" depends="init" description="compile java sources">
         <javac srcdir="${source.dir}" destdir="${build.dir}"/>
+        <jar destfile="Hello.jar" basedir="${build.dir}">
+            <manifest>
+                <attribute name="Main-Class"
+                           value="ex.Hello"/>
+            </manifest>
+        </jar>
     </target>
 
     <!-- Generate javadocs for current project into ${doc.dir} -->
