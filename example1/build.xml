@@ -33,5 +33,12 @@
             <fileset defaultexcludes="no" dir="${source.dir}" includes="**/*~"/>
         </delete>
     </target>
+    <target name="jar" depends="compile">
+        <jar destfile="Hello.jar" basedir="${build.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="ex.Hello"/>
+            </manifest>
+        </jar>
+    </target>
 
 </project>
