@@ -24,6 +24,15 @@
     <target name="doc" depends="init" description="generate documentation">
         <javadoc sourcepath="${source.dir}" destdir="${doc.dir}"/>
     </target>
+	
+	<!--Create jar file -->
+	<target name="jar" depends="compile" description="create Jar file">
+		 <jar destfile="${jar.dir}/myJar.jar" basedir="${build.dir}">
+			<manifest>
+				<attribute name="Main-Class" value="mainClass"/>
+			</manifest>
+		</jar>
+    </target>
 
     <!-- Delete the build & doc directories and Emacs backup (*~) files -->
     <target name="clean" description="tidy up the workspace">
