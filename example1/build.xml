@@ -1,5 +1,4 @@
 <project name="Sample Project" default="compile" basedir=".">
-	
     <description>
         A sample build file for this project
     </description>
