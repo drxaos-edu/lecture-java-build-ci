@@ -1,5 +1,5 @@
 <project name="Sample Project" default="compile" basedir=".">
-
+	
     <description>
         A sample build file for this project
     </description>
@@ -17,7 +17,7 @@
 
     <!-- Compile the java code in ${src.dir} into ${build.dir} -->
     <target name="compile" depends="init" description="compile java sources">
-        <javac srcdir="${source.dir}" destdir="${build.dir}"/>
+        <javac srcdir="${source.dir}" includeantruntime="true" destdir="${build.dir}" />
     </target>
 
     <!-- Generate javadocs for current project into ${doc.dir} -->
@@ -34,4 +34,14 @@
         </delete>
     </target>
 
+	<target name="make_jar" description="make jar file" depends="compile">
+        <jar destfile="bin/Ant.jar">
+            <fileset dir="bin">
+                <include name="*.class"/>
+            </fileset>
+            <manifest>
+                <attribute name="Main-Class" value="Hello"/>
+            </manifest>
+        </jar>
+    </target>	
 </project>
