@@ -1,9 +1,9 @@
 <project name="Sample Project" default="compile" basedir=".">
+	
     <description>
         A sample build file for this project
     </description>
 
-	
     <!-- global properties for this build file -->
     <property name="source.dir" location="src"/>
     <property name="build.dir" location="bin"/>
