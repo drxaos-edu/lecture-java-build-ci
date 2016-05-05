@@ -1,4 +1,4 @@
-<project name="Lab 6" default="compile" basedir=".">
+<project name="Sample Project" default="compile" basedir=".">
 	
     <description>
         A sample build file for this project
