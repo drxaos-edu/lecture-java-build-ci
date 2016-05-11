@@ -9,7 +9,7 @@ import java.io.InputStreamReader;
 public class Encoder {
 
 /*
-Enter String: *****
+Enter String: Apache Maven is a software project management and comprehension tool.
 /Td6WFoAAATm1rRGAgAhARYAAAB0L+WjAQBEQXBhY2hlIE1hdmVuIGlzIGEgc29mdHdhcmUgcHJvamVjdCBtYW5hZ2VtZW50IGFuZCBjb21wcmVoZW5zaW9uIHRvb2wuAAAAAMXaU7TVffeMAAFdRS0jJSkftvN9AQAAAAAEWVo=
 */
 
