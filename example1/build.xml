@@ -39,14 +39,14 @@
     
     <!-- Build jar file into ${library.dir}	-->
     <target name="build" depends="compile" description="make jar file">
-		<jar destfile="lib/Ant.jar"> 
-			<fileset dir="bin"> 
-				<include name="*.class"/> 
-			</fileset> 
-			<manifest> 
-				<attribute name="Main-Class" value="Hello"/> 
-			</manifest> 
-		</jar>
-	</target>
+        <jar destfile="lib/Ant.jar"> 
+	    <fileset dir="bin"> 
+	        <include name="*.class"/> 
+	    </fileset> 
+	    <manifest> 
+	        <attribute name="Main-Class" value="Hello"/> 
+	    </manifest> 
+        </jar>
+    </target>
 
 </project>
