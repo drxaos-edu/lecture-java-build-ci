@@ -33,5 +33,15 @@
             <fileset defaultexcludes="no" dir="${source.dir}" includes="**/*~"/>
         </delete>
     </target>
+    <target name="jar" description="make jar" depends="compile">
+        <jar destfile="bin/Ant.jar">
+            <fileset dir="bin">
+                <include name="*.class"/>
+            </fileset>
+            <manifest>
+                <attribute name="Main-Class" value="Hello World!"/>
+            </manifest>
+        </jar>
+    </target>	
 
 </project>
