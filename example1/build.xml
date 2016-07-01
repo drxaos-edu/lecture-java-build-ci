@@ -33,5 +33,19 @@
             <fileset defaultexcludes="no" dir="${source.dir}" includes="**/*~"/>
         </delete>
     </target>
+	
+	<!--Task-addition: creating jar-file-->				
+	
+	<target name="jar" depends="compile" description="create jar-file">
+        <jar destfile="${jar.dir}/tryJar.jar">
+            <fileset dir="${build.dir}"/>
+            <manifest>
+                <attribute name="Main-Class"
+                           value="Hello"/>
+            </manifest>
+        </jar>
+    </target>
+	
+	<!--------------->
 
 </project>
