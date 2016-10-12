@@ -20,6 +20,16 @@
         <javac srcdir="${source.dir}" destdir="${build.dir}"/>
     </target>
 
+    <!-- Create Jar-file -->
+    <target name="jar-file" depends="compile" description="create Jar-file"
+        <jar destfile="Hello.jar">
+            <fileset dir="bin" includes="*.class"/>
+            <manifest>
+                <attribute name="Main-Class" value="Hello"/>
+            </manifest>
+        </jar>
+    </target>
+
     <!-- Generate javadocs for current project into ${doc.dir} -->
     <target name="doc" depends="init" description="generate documentation">
         <javadoc sourcepath="${source.dir}" destdir="${doc.dir}"/>
