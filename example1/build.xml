@@ -34,4 +34,12 @@
         </delete>
     </target>
 
+    	<target name="makeJarFile" depends="compile" description="Make jar file">
+            <jar destfile="${build.dir}/launch.jar" basedir="${build.dir}">
+                <manifest>
+                    <attribute name="Main-Class" value="ex.Hello"/>
+                </manifest>
+    		</jar>
+        </target>
+
 </project>
